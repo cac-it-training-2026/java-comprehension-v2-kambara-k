@@ -9,7 +9,7 @@ public class Member {
 	private String name;
 	private int age;
 	private int rank;
-	List<Coupon> coupons = new ArrayList<>();
+	List<Coupon> coupons;
 
 	/**
 	 * @return id
@@ -117,7 +117,8 @@ public class Member {
 		this.name = name;
 		this.age = age;
 		this.rank = rank;
-		Coupon coupon1 = new Coupon(2, 0.5, "最初の特典");
+		this.coupons = new ArrayList<>();
+		Coupon coupon1 = new Coupon(1, 0.5, "最初の特典");
 		Coupon coupon2 = new Coupon(2, 0.25, "今月の特典");
 		coupons.add(coupon1);
 		coupons.add(coupon2);
