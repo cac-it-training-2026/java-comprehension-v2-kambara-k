@@ -70,5 +70,4 @@ public class Coupon extends Member {
 
 		return str;
 	}
-
 }
