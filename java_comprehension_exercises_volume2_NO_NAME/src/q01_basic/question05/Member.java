@@ -1,9 +1,10 @@
-package q01_basic.question04;
+package q01_basic.question05;
 
 /**
- * 会員を表すクラス。 ID、パスワード、氏名、年齢、ランクなどの会員情報を保持する。
+ * 会員を表すクラス。 AbstMemberクラスを継承し、ID、パスワード、氏名、年齢、ランクなどの会員情報を保持する。
  */
-class Member {
+public class Member extends AbstMember {
+
 	/** 会員ID */
 	private int id;
 
@@ -121,6 +122,13 @@ class Member {
 		this.name = name;
 		this.age = age;
 		this.rank = rank;
+	}
+
+	/**
+	 * 商品を購入する処理を行う。 現在は購入時に50%割引が適用されるメッセージを標準出力に表示する。
+	 */
+	public void buyItem() {
+		System.out.println(name + " purchased the item at 50% pff");
 	}
 
 	/**

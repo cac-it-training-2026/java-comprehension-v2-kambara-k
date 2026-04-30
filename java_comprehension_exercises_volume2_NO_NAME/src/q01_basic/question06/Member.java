@@ -1,17 +1,15 @@
-package q01_basic.question04;
+package q01_basic.question06;
 
 /**
- * 会員を表すクラス。 ID、パスワード、氏名、年齢、ランクなどの会員情報を保持する。
+ * 会員を表すクラス。 AbstMemberクラスを継承し、ID、パスワード、年齢、ランクなどの会員情報を保持する。
  */
-class Member {
+public class Member extends AbstMember {
+
 	/** 会員ID */
 	private int id;
 
 	/** ログイン用パスワード */
 	private String password;
-
-	/** 会員氏名 */
-	private String name;
 
 	/** 年齢 */
 	private int age;
@@ -47,21 +45,6 @@ class Member {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	/**
-	 * @return name
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * @param name
-	 *            セットする name
-	 */
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	/**
@@ -121,6 +104,14 @@ class Member {
 		this.name = name;
 		this.age = age;
 		this.rank = rank;
+	}
+
+	/**
+	 * AbstMemberクラスからオーバーライドし、商品を購入する処理を行う。 出力
+	 */
+	@Override
+	public void buyItem() {
+
 	}
 
 	/**

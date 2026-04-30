@@ -1,16 +1,21 @@
-package q01_basic.question04;
+package q02_advanced.question03;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import q02_advanced.question02.Coupon;
 
 /**
- * 会員を表すクラス。 ID、パスワード、氏名、年齢、ランクなどの会員情報を保持する。
+ * 会員を表すクラス。ID、パスワード、氏名、年齢、ランクなどの会員情報を保持する。
  */
-class Member {
+public class Member {
 	/** 会員ID */
 	private int id;
 
 	/** ログイン用パスワード */
 	private String password;
 
-	/** 会員氏名 */
+	/** 氏名 */
 	private String name;
 
 	/** 年齢 */
@@ -18,6 +23,8 @@ class Member {
 
 	/** 会員ランク */
 	private int rank;
+
+	List<Coupon> coupons;
 
 	/**
 	 * @return id
@@ -95,6 +102,21 @@ class Member {
 	}
 
 	/**
+	 * @return coupons
+	 */
+	public List<Coupon> getCoupons() {
+		return coupons;
+	}
+
+	/**
+	 * @param coupons
+	 *            セットする coupons
+	 */
+	public void setCoupons(List<Coupon> coupons) {
+		this.coupons = coupons;
+	}
+
+	/**
 	 * 空のMemberオブジェクトを生成する。 各フィールドはデフォルト値で初期化される。
 	 */
 	public Member() {
@@ -121,19 +143,36 @@ class Member {
 		this.name = name;
 		this.age = age;
 		this.rank = rank;
+		this.coupons = new ArrayList<>();
 	}
 
 	/**
-	 * 会員情報を標準出力に表示する。 ID、パスワード、氏名、年齢、ランクを整形して出力する。
+	 * 会員情報を文字列として返す。 id、password、name、age、rank、couponsを含む。
+	 */
+	public String toString() {
+		String str = "Member [id=" + id + ", password=" + password + ", name=" + name
+				+ ", age=" + age + ", rank=" + rank + ", coupons=" + coupons;
+		return str;
+	}
+
+	/**
+	 * 会員情報を標準出力に表示する。 内部的にtoString()の結果を出力する。
 	 */
 	public void showMember() {
-		System.out.println("***MEMBER DATA***");
-		System.out.println("id：" + id);
-		System.out.println("password：" + password);
-		System.out.println("name：" + name);
-		System.out.println("age：" + age);
-		System.out.println("rank：" + rank);
-		System.out.println("***************** ");
+		System.out.println(toString());
+	}
+
+	/**
+	 * 指定された情報でMemberオブジェクト・Couponオブジェクトを生成する。
+	 * 生成したCouponオブジェクトはリストに代入し、Memberオブジェクトは戻り値として返す。
+	 */
+	public static Member getInstance(int id, String password, String name, int age, int rank) {
+		Member member = new Member(id, password, name, age, rank);
+		Coupon coupon1 = Coupon.getInstance(1, 0.5, "最初の特典");
+		Coupon coupon2 = Coupon.getInstance(2, 0.25, "今月の特典");
+		member.coupons.add(coupon1);
+		member.coupons.add(coupon2);
+		return member;
 	}
 
 }
