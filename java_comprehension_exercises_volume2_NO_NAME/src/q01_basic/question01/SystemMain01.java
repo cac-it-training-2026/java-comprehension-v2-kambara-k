@@ -10,13 +10,16 @@ package q01_basic.question01;
  * 
  * 
  */
+
 public class SystemMain01 {
 
 	public static void main(String[] args) {
 
+		// 会員インスタンス生成
 		Member member1 = new Member();
 		Member member2 = new Member();
 
+		// サンプルデータ設定
 		member1.name = "Miura Manabu";
 		member1.age = 24;
 		member1.rank = 1;
@@ -25,6 +28,7 @@ public class SystemMain01 {
 		member2.age = 36;
 		member2.rank = 2;
 
+		// 会員情報の表示
 		System.out.println("---SHOW DATA---");
 		member1.showMember();
 		member2.showMember();

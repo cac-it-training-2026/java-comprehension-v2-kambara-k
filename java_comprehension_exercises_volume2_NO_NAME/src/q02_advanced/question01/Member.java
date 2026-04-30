@@ -3,12 +3,25 @@ package q02_advanced.question01;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 会員を表すクラス。ID、パスワード、氏名、年齢、ランクなどの会員情報を保持する。
+ */
 public class Member {
+	/** 会員ID */
 	private int id;
+
+	/** ログイン用パスワード */
 	private String password;
+
+	/** 氏名 */
 	private String name;
+
+	/** 年齢 */
 	private int age;
+
+	/** 会員ランク */
 	private int rank;
+
 	List<Coupon> coupons;
 
 	/**
@@ -101,16 +114,26 @@ public class Member {
 		this.coupons = coupons;
 	}
 
+	/**
+	 * 空のMemberオブジェクトを生成する。 各フィールドはデフォルト値で初期化される。
+	 */
 	public Member() {
 
 	}
 
 	/**
+	 * 指定された情報でMemberオブジェクトを生成する
+	 *
 	 * @param id
+	 *            会員ID
 	 * @param password
+	 *            パスワード
 	 * @param name
+	 *            会員名
 	 * @param age
+	 *            年齢
 	 * @param rank
+	 *            会員ランク
 	 */
 	public Member(int id, String password, String name, int age, int rank) {
 		this.id = id;
@@ -125,12 +148,18 @@ public class Member {
 		coupons.add(coupon2);
 	}
 
+	/**
+	 * 会員情報を文字列として返す。 id、password、name、age、rank、couponsを含む。
+	 */
 	public String toString() {
 		String str = "Member [id=" + id + ", password=" + password + ", name=" + name
 				+ ", age=" + age + ", rank=" + rank + ", coupons=" + coupons;
 		return str;
 	}
 
+	/**
+	 * 会員情報を標準出力に表示する。 内部的にtoString()の結果を出力する。
+	 */
 	public void showMember() {
 		System.out.println(toString());
 		System.out.println("******************");

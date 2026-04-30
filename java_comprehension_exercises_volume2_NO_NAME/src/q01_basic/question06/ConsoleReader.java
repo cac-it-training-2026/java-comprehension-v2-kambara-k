@@ -18,7 +18,7 @@ class ConsoleReader {
 	 * @throws IOException
 	 */
 	public String inputString() throws IOException {
-		//TODO ここから実装する
+
 		System.out.print("input password>>");
 		String inputPassword = br.readLine();
 		return inputPassword;
@@ -32,7 +32,7 @@ class ConsoleReader {
 	 * @throws NumberFormatException
 	 */
 	public int inputNumber() throws IOException, NumberFormatException {
-		//TODO ここから実装する
+
 		System.out.print("input id>>");
 		String inputIdStr = br.readLine();
 		return Integer.parseInt(inputIdStr);

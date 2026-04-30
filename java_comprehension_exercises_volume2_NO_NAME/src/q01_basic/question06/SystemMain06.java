@@ -2,13 +2,17 @@ package q01_basic.question06;
 
 import java.io.IOException;
 
-import q01_basic.question05.Member;
-
+/**
+ * コンソールから会員情報を入力し、Memberを生成して表示する
+ */
 public class SystemMain06 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
+		// 入力用インスタンスの生成
 		ConsoleReader cr = new ConsoleReader();
+
+		// 会員情報
 		int inputId = 0;
 		String inputPassword = null;
 		String name = "Miura Manabu";
@@ -16,14 +20,16 @@ public class SystemMain06 {
 		int rank = 2;
 
 		System.out.println("---CREATE MEMBER DATA---");
-		//TODO ここから実装する
+
+		// 会員IDの入力
 		try {
 			inputId = cr.inputNumber();
 		} catch (IOException e) {
 			e.printStackTrace();
-			return;
+			return; // 入力エラー時に処理を終了させる
 		}
 
+		// パスワードの入力
 		try {
 			inputPassword = cr.inputString();
 		} catch (IOException e) {
@@ -31,11 +37,13 @@ public class SystemMain06 {
 		} catch (NumberFormatException e) {
 			System.out.println("error!");
 			e.printStackTrace();
-			return;
+			return; // 入力エラー時に処理を終了させる
 		}
 
+		// 会員オブジェクト生成
 		Member member = new Member(inputId, inputPassword, name, age, rank);
 
+		// 会員情報表示
 		System.out.println("---SHOW MEMBER--- ");
 		member.showMember();
 

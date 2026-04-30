@@ -1,14 +1,18 @@
 package q01_basic.question02;
 
+/**
+ * 会員を表すクラス。 氏名、年齢、ランクなどの会員情報を保持する。
+ */
 class Member {
 
+	/** 会員氏名 */
 	private String name;
+
+	/** 年齢 */
 	private int age;
+
+	/** 会員ランク */
 	private int rank;
-
-	public Member() {
-
-	}
 
 	/**
 	 * @return name
@@ -55,10 +59,23 @@ class Member {
 		this.rank = rank;
 	}
 
+	/**
+	 * 空のMemberオブジェクトを生成する。 各フィールドはデフォルト値で初期化される。
+	 */
+	public Member() {
+
+	}
+
+	/**
+	 * rankフィールドの値を1加算
+	 */
 	public void rankUp() {
 		this.rank += 1;
 	}
 
+	/**
+	 * 会員情報を標準出力に表示する。氏名、年齢、ランクを整形して出力する。
+	 */
 	public void showMember() {
 		System.out.println("***MEMBER DATA***");
 		System.out.println("name：" + name);

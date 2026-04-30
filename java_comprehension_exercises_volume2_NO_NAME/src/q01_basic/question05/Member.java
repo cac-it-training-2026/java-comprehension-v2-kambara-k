@@ -1,10 +1,23 @@
 package q01_basic.question05;
 
+/**
+ * 会員を表すクラス。 AbstMemberクラスを継承し、ID、パスワード、氏名、年齢、ランクなどの会員情報を保持する。
+ */
 public class Member extends AbstMember {
+
+	/** 会員ID */
 	private int id;
+
+	/** ログイン用パスワード */
 	private String password;
+
+	/** 会員氏名 */
 	private String name;
+
+	/** 年齢 */
 	private int age;
+
+	/** 会員ランク */
 	private int rank;
 
 	/**
@@ -82,10 +95,27 @@ public class Member extends AbstMember {
 		this.rank = rank;
 	}
 
+	/**
+	 * 空のMemberオブジェクトを生成する。 各フィールドはデフォルト値で初期化される。
+	 */
 	public Member() {
 
 	}
 
+	/**
+	 * 指定された情報でMemberオブジェクトを生成する
+	 *
+	 * @param id
+	 *            会員ID
+	 * @param password
+	 *            パスワード
+	 * @param name
+	 *            会員名
+	 * @param age
+	 *            年齢
+	 * @param rank
+	 *            会員ランク
+	 */
 	public Member(int id, String password, String name, int age, int rank) {
 		this.id = id;
 		this.password = password;
@@ -94,10 +124,16 @@ public class Member extends AbstMember {
 		this.rank = rank;
 	}
 
+	/**
+	 * 商品を購入する処理を行う。 現在は購入時に50%割引が適用されるメッセージを標準出力に表示する。
+	 */
 	public void buyItem() {
 		System.out.println(name + " purchased the item at 50% pff");
 	}
 
+	/**
+	 * 会員情報を標準出力に表示する。 ID、パスワード、氏名、年齢、ランクを整形して出力する。
+	 */
 	public void showMember() {
 		System.out.println("***MEMBER DATA***");
 		System.out.println("id：" + id);
