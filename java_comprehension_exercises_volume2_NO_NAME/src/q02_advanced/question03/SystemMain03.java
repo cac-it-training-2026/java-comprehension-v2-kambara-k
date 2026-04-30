@@ -59,5 +59,4 @@ public class SystemMain03 {
 		member.showMember();
 
 	}
-
 }
