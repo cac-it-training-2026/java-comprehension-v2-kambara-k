@@ -3,12 +3,16 @@ package q02_advanced.question03;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Memberクラスのリスト一覧を管理するクラス
+ */
 class MemberStorage {
 
 	private List<Member> members;
 
 	/**
 	 * @param members
+	 *            Memberクラスのリスト一覧
 	 */
 	public MemberStorage() {
 		this.members = new ArrayList<>();
@@ -28,7 +32,8 @@ class MemberStorage {
 	}
 
 	/**
-	 * @param members セットする members
+	 * @param members
+	 *            セットする members
 	 */
 	public void setMembers(List<Member> members) {
 		this.members = members;

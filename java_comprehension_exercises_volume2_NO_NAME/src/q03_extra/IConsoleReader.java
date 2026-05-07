@@ -12,13 +12,15 @@ import java.io.InputStreamReader;
 interface IConsoleReader {
 
 	/**
-	 * コンソールから読み取るためのメソッド
-	 * <br>呼び出し先で戻り値を適正な型（IntegerやString）にキャストすること
-	 * <br>またisValidメソッドを呼び出し、入力値のチェックを行う。
+	 * コンソールから読み取るためのメソッド <br>
+	 * 呼び出し先で戻り値を適正な型（IntegerやString）にキャストすること <br>
+	 * またisValidメソッドを呼び出し、入力値のチェックを行う。
 	 * 
 	 * @return 入力値
-	 * @throws SystemErrorException IOExceptionをキャッチして送出する
-	 * @throws IllegalInputException isValidメソッドの結果がfalseの場合に送出する
+	 * @throws SystemErrorException
+	 *             IOExceptionをキャッチして送出する
+	 * @throws IllegalInputException
+	 *             isValidメソッドの結果がfalseの場合に送出する
 	 */
 	public default Object input() throws SystemErrorException, IllegalInputException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -43,8 +45,7 @@ interface IConsoleReader {
 	}
 
 	/**
-	 * @return 入力条件のエラーメッセージ
-	 * ex "4文字以上8文字以内の半角数字を入力してください"
+	 * @return 入力条件のエラーメッセージ ex "4文字以上8文字以内の半角数字を入力してください"
 	 */
 	String setErrorMsg();
 
@@ -58,5 +59,4 @@ interface IConsoleReader {
 	 * @return inputをint型へ変換する必要があるときはtrue、そうでないときはfalseを返す。
 	 */
 	boolean isParseInt();
-
 }
