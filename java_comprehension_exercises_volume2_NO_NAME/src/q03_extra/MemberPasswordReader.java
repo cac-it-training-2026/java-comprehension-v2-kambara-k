@@ -22,8 +22,7 @@ public class MemberPasswordReader implements IConsoleReader {
 		if (inputString.matches("^[A-Za-z0-9]{8,16}$")) {
 			return true;
 		} else {
-			setErrorMsg();
-			return isParseInt();
+			return false;
 		}
 	}
 

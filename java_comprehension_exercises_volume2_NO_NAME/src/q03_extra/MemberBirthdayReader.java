@@ -30,8 +30,7 @@ public class MemberBirthdayReader implements IConsoleReader {
 			sdf.parse(inputString.trim());
 			return true;
 		} catch (ParseException e) {
-			setErrorMsg();
-			return isParseInt();
+			return false;
 		}
 	}
 

@@ -22,8 +22,7 @@ public class MemberNameReader implements IConsoleReader {
 		if (inputString.matches("^[A-Za-z ]{1,16}$")) {
 			return true;
 		} else {
-			setErrorMsg();
-			return isParseInt();
+			return false;
 		}
 	}
 
