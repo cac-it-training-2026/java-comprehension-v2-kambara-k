@@ -37,5 +37,4 @@ class CreateUserService {
 		memberStorage.getMembers().add(Member.getInstance(id, password, name, birthday));
 		return true;
 	}
-
 }

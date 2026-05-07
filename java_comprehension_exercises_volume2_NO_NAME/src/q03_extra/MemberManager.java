@@ -15,7 +15,6 @@ public class MemberManager {
 	/**
 	 * @param inputId
 	 * @param list
-	 * 
 	 */
 	public static void ShowCreateUser(List<Member> members, int inputId) {
 		for (Member member : members) {

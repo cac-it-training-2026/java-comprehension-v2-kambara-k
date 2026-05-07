@@ -59,5 +59,4 @@ interface IConsoleReader {
 	 * @return inputをint型へ変換する必要があるときはtrue、そうでないときはfalseを返す。
 	 */
 	boolean isParseInt();
-
 }

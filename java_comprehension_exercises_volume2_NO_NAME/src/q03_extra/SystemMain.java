@@ -86,5 +86,4 @@ public class SystemMain {
 		MemberManager.ShowCreateUser(memberStorage.getMembers(), inputId);
 
 	}
-
 }

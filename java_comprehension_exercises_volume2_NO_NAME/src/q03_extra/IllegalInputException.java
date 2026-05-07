@@ -1,6 +1,7 @@
 package q03_extra;
 
 public class IllegalInputException extends Exception {
+
 	/**
 	 * 空のMemberオブジェクトを生成する。 各フィールドはデフォルト値で初期化される。
 	 */

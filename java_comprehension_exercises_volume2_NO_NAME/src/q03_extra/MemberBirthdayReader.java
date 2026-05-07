@@ -4,7 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 /**
- * IConsoleReaderを継承し、MemberBirthdayの入力を管理する
+ * IConsoleReaderを継承し、MemberBirthdayの入力を管理する。
  */
 public class MemberBirthdayReader implements IConsoleReader {
 

@@ -189,5 +189,4 @@ public class Member {
 		member.coupons.add(coupon2);
 		return member;
 	}
-
 }

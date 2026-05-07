@@ -1,7 +1,7 @@
 package q03_extra;
 
 /**
- * IConsoleReaderを継承し、MemberIdの入力を管理する
+ * IConsoleReaderを継承し、MemberIdの入力を管理する。
  */
 public class MemberIdReader implements IConsoleReader {
 

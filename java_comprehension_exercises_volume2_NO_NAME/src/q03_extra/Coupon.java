@@ -99,5 +99,4 @@ public class Coupon {
 		Coupon coupon = new Coupon(id, discountRate, discription);
 		return coupon;
 	}
-
 }

@@ -33,5 +33,4 @@ public class MemberPasswordReader implements IConsoleReader {
 	public boolean isParseInt() {
 		return false;
 	}
-
 }

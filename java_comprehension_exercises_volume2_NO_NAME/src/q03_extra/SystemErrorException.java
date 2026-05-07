@@ -38,5 +38,4 @@ public class SystemErrorException extends Exception {
 	public SystemErrorException(Throwable cause) {
 		super(cause);
 	}
-
 }

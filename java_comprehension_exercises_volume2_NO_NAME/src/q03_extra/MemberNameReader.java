@@ -33,5 +33,4 @@ public class MemberNameReader implements IConsoleReader {
 	public boolean isParseInt() {
 		return false;
 	}
-
 }
