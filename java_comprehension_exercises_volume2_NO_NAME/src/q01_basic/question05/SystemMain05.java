@@ -22,5 +22,4 @@ public class SystemMain05 {
 		member.buyItem();
 
 	}
-
 }

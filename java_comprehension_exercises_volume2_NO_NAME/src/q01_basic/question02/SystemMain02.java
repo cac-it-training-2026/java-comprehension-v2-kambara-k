@@ -24,6 +24,5 @@ public class SystemMain02 {
 
 		// 更新後のランクを表示
 		System.out.println("newRank" + newRank);
-
 	}
 }

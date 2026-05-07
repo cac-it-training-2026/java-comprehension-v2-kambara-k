@@ -42,5 +42,4 @@ public class SystemMain07 {
 		numberList.removeIndexOfFirstHalf();
 		System.out.println(numberList.getNumbers());
 	}
-
 }

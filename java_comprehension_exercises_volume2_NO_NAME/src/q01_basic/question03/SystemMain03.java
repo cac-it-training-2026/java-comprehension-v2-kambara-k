@@ -15,5 +15,4 @@ public class SystemMain03 {
 		member2.showMember();
 
 	}
-
 }

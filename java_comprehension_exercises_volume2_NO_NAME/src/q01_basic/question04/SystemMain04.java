@@ -1,7 +1,6 @@
 package q01_basic.question04;
 
 public class SystemMain04 {
-
 	public static void main(String[] args) {
 
 		// 2つの要素を持つ会員配列を作成
