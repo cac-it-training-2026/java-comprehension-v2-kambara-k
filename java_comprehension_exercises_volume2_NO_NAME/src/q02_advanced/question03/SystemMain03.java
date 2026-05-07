@@ -57,6 +57,5 @@ public class SystemMain03 {
 		// 会員情報表示
 		System.out.println("ログインユーザ情報を表示します。");
 		member.showMember();
-
 	}
 }

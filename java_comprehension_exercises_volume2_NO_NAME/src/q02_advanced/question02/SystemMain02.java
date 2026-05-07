@@ -8,7 +8,6 @@ import java.util.List;
  * 会員情報の表示・パスワード更新処理を行う。
  */
 public class SystemMain02 {
-
 	public static void main(String[] args) {
 
 		// 会員データ作成

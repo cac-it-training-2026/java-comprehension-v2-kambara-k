@@ -16,6 +16,5 @@ public class SystemMain01 {
 		// 会員情報表示
 		member1.showMember();
 		member2.showMember();
-
 	}
 }
